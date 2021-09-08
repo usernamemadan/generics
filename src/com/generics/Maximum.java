@@ -1,22 +1,20 @@
 package com.generics;
 
-public class Maximum {
-	String x;
-	String y;
-	String z;
+public class Maximum<T extends Comparable<T>> {
+	T x,y,z;
 	
-	public Maximum(String x, String y, String z) {
+	public Maximum(T x, T y, T z) {
 		this.x = x;
 		this.y = y;
 		this.z = z;
 	}
 	
-	public String maximum() {
+	public T maximum() {
 		return Maximum.maximum(x,y,z);
 	}
 
-	public static String maximum(String x, String y, String z) {
-		String max = x;
+	private static <T extends Comparable<T>> T maximum(T x, T y, T z) {
+		T max = x;
 		
 		if(y.compareTo(max)>0)
 			max = y;
@@ -26,8 +24,8 @@ public class Maximum {
 		return max;
 	}
 
-	public static void printMax(String x, String y, String z, String max) {
+	private static<T extends Comparable<T>> void printMax(T x, T y, T z, T max) {
 		System.out.println("Max of "+x+", "+y+" and "+z+" is "+max);
 	}
-
+	
 }
