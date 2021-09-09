@@ -38,13 +38,15 @@ public class Maximum<T extends Comparable<T>> {
 				}
 			}
 		}
-	//	printMax(arr);
+		printMax(arr);
 	}
 	
 	private static<T extends Comparable<T>> void printMax(T x, T y, T z, T max) {
 		System.out.println("Max of "+x+", "+y+" and "+z+" is "+max);
 	}
 	
-	
+	private static<T extends Comparable<T>> void printMax(T[] arr) {
+		System.out.println("Max of elements is " +arr[arr.length-1]);
+	}
 	
 }
