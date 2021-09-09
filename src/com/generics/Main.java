@@ -9,5 +9,13 @@ public class Main {
 		new Maximum(xstr,ystr,zstr).maximum();
 		new Maximum(xInt,yInt,zInt).maximum();
 		new Maximum(xFlt,yFlt,zFlt).maximum();
+		
+	    Integer [] arr = {2 ,23, 5 ,3 ,45,32};
+	    String[] strings = {"abc", "bat", "mat", "xyz"};
+	    Double[] d = {44.3 , 332.3 ,554.4 ,335.6, 566.3};
+	    
+		Maximum.testMaximum(arr);
+	    Maximum.testMaximum(strings);
+	    Maximum.testMaximum(d);
 	}
 }

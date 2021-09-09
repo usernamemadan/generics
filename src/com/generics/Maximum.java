@@ -1,5 +1,7 @@
 package com.generics;
 
+import java.util.List;
+
 public class Maximum<T extends Comparable<T>> {
 	T x,y,z;
 	
@@ -24,8 +26,25 @@ public class Maximum<T extends Comparable<T>> {
 		return max;
 	}
 
+	public static <T extends Comparable<T>> void testMaximum(T[] arr) {
+       // bubble sort
+		for(int i=0;i<arr.length-1;i++) {
+			for(int j=0;j<arr.length-i-1;j++) {
+				if(arr[j].compareTo(arr[j+1]) > 0) {
+					T temp = arr[j];
+					arr[j] = arr[j+1];
+					arr[j+1] = temp;
+					
+				}
+			}
+		}
+	//	printMax(arr);
+	}
+	
 	private static<T extends Comparable<T>> void printMax(T x, T y, T z, T max) {
 		System.out.println("Max of "+x+", "+y+" and "+z+" is "+max);
 	}
+	
+	
 	
 }
